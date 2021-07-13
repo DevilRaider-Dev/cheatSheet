@@ -72,3 +72,7 @@ img{
     background-color: rgb(10, 10, 65);
 }
 /* --- footer --- */
+footer{
+    display: inline-block;
+    margin-top: 5%;
+}

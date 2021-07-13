@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
+
 <body>
     <header>
         <!-- placeholder nav -->
@@ -18,8 +19,8 @@
                 <li><a href="#" class="currentLocation">Git</a></li>
             </ul>
         </nav>
-        <h2></h2>
-        <h1><br>Git Terminal Cheat Sheet</h1>
+        <h2><br></h2>
+        <h1>Git Terminal Cheat Sheet</h1>
     </header>
     <main>
         <table class="codeContainer">
@@ -45,9 +46,105 @@
                     <pre>git add [Verzeichnis oder Datei]</pre>
                 </td>
                 <td class="result">
-                    <pre>Initialized empty Git repository in "Verzeichnispfad"</pre>
+                    <pre>Überprüfung der hinzugefügten Elemente mit git status</pre>
                 </td>
             </tr>
         </table>
+        <table class="codeContainer">
+            <tr>
+                <td colspan="2">Überprüfung der hinzugefügten Elemente</td>
+            </tr>
+            <tr>
+                <td class="code">
+                    <pre>git status</pre>
+                </td>
+                <td class="result">
+                    <pre>On branch master
+
+No commits yet
+
+Changes to be committed:
+(use "git rm --cached <file>..." to unstage)
+        new file:   assets/css/style.css
+        new file:   assets/fonts/CONSOLA.TTF
+        new file:   assets/html/git.html
+        new file:   assets/html/ps.html
+        new file:   assets/img/bg_lp.jpg
+        new file:   index.html
+                        </pre>
+                </td>
+            </tr>
+        </table>
+        <table class="codeContainer">
+            <tr>
+                <td colspan="2">Übergabe der hinzugefügten Elemente an das Lokale Repository</td>
+            </tr>
+            <tr>
+                <td class="code">
+                    <pre>git commit -m "[Kommentar]"</pre>
+                </td>
+                <td class="result">
+                    <pre>[master (root-commit) 7697e5a] first commit 
+6 files changed, 307 insertions(+)
+create mode 100644 assets/css/style.css    
+create mode 100644 assets/fonts/CONSOLA.TTF
+create mode 100644 assets/html/git.html    
+create mode 100644 assets/html/ps.html     
+create mode 100644 assets/img/bg_lp.jpg    
+create mode 100644 index.html
+                    </pre>
+                </td>
+            </tr>
+        </table>
+        <table class="codeContainer">
+            <tr>
+                <td colspan="2">überprüfen der lokalen Repositorys</td>
+            </tr>
+            <tr>
+                <td class="code">
+                    <pre>git log [--oneline]</pre>
+                </td>
+                <td class="result">
+                    <pre>commit 7697e5aea8ea7de79f3b7da3b584045787a127a1 (HEAD -> master)
+Author: DevilRaider-Dev <deviltwix3@gmail.com>
+Date:   Tue Jul 13 12:58:49 2021 +0200
+
+    first commit
+                    </pre>
+                    <pre>bsp. --online</pre>
+                    <pre>7697e5a (HEAD -> master) first commit</pre>
+                </td>
+            </tr>
+        </table>
+        <table class="codeContainer">
+            <tr>
+                <td colspan="2">Repositorys nach github pushen</td>
+            </tr>
+            <tr>
+                <td class="code">
+                    <pre>git push</pre>
+                </td>
+                <td class="result">
+                    <pre>Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (13/13), 1.30 MiB | 3.93 MiB/s, done.
+Total 13 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/DevilRaider-Dev/cheatSheet.git
+                    </pre>
+                    <pre>bsp. --online</pre>
+                    <pre>7697e5a (HEAD -> master) first commit</pre>
+                </td>
+            </tr>
+        </table>
+
+
+<!-- 
+git push
+git pull
+git merge
+ -->
     </main>
+    <footer></footer>
 </body>
