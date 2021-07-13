@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- placeholder nav -->
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li class="currentLocation"><a href="#">Powershell</a></li>
+                <li><a href="git.html">Git</a></li>
+            </ul>
+        </nav>
+        <h2><br></h2>
+        <h1>Powershell Cheat Sheet</h1>
+    </header>
+    <main>
+        <!-- placeholder jump menu -->
+        <table class="codeContainer">
+            <tr>
+                <td colspan="2">Verzeichnisinhalt auflisten</td>
+            </tr>
+            <tr>
+                <td class="code">
+                    <pre>PS D:\Dev\SuperCode> ls</pre>
+                </td>
+                <td class="result">
+                    <pre>
+PS D:\Dev\SuperCode> ls
+
+
+     Verzeichnis: D:\Dev\SuperCode
+
+
+Mode LastWriteTime Length Name
+---- ------------- ------ ----
+d----- 12.07.2021 09:25 CodeSnippets
+d----- 23.06.2021 12:02 Folien
+d----- 09.07.2021 10:33 fonts
+d----- 07.07.2021 15:19 icons
+d----- 12.07.2021 13:24 Lessons
+d----- 24.06.2021 10:03 Mitschrift
+d----- 24.06.2021 10:01 Notizen
+d----- 12.07.2021 13:16 Projects
+d----- 12.07.2021 11:33 Terminal-Game
+d----- 23.06.2021 14:33 Unterlagen</pre>
+                </td>
+            </tr>
+        </table>
+        <table class="codeContainer">
+            <tr>
+                <td colspan="2">in ein anderes Verzeichnis navigieren</td>
+            </tr>
+            <tr>
+                <td class="code">
+                    <pre>PS D:\Dev\SuperCode> cd Folien</pre>
+                </td>
+                <td class="result">
+                    <pre>PS D:\Dev\SuperCode\Folien></pre>
+                </td>
+            </tr>
+        </table>
+        <table class="codeContainer">
+            <tr>
+                <td colspan="2">in das übergeordnete Verzeichnis wechseln</td>
+            </tr>
+            <tr>
+                <td class="code">
+                    <pre>PS D:\Dev\SuperCode\Folien> cd ..</pre>
+                </td>
+                <td class="result">
+                    <pre>PS D:\Dev\SuperCode></pre>
+                </td>
+            </tr>
+        </table>
+        <table class="codeContainer">
+            <tr>
+                <td colspan="2">ein Verzeichnis anlegen</td>
+            </tr>
+            <tr>
+                <td class="code">
+                    <pre>PS D:\Dev\SuperCode> mkdir test</pre>
+                    <pre>oder</pre>
+                    <pre>PS D:\Dev\SuperCode> New-Item -ItemType directory test</pre>
+                </td>
+                <td class="result">
+                    <pre>PS D:\Dev\SuperCode> New-Item -ItemType directory test2
+
+
+    Verzeichnis: D:\Dev\SuperCode
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        12.07.2021     15:45                test2</pre>
+                </td>
+            </tr>
+        </table>
+        <table class="codeContainer">
+            <tr>
+                <td colspan="2">Datei anlegen</td>
+            </tr>
+            <tr>
+                <td class="code">
+                    <pre>PS D:\Dev\SuperCode> New-Item -ItemType file test.txt</pre>
+                </td>
+                <td class="result">
+                    <pre>PS D:\Dev\SuperCode> New-Item -ItemType file test.txt
+
+
+     Verzeichnis: D:\Dev\SuperCode
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        12.07.2021     15:49              0 test.txt</pre>
+                </td>
+            </tr>
+        </table>
+        <table class="codeContainer">
+            <tr>
+                <td colspan="2">Datei löschen</td>
+            </tr>
+            <tr>
+                <td class="code">
+                    <pre>Remove-Item test.txt</pre>
+                </td>
+                <td class="result">
+                    <pre>Beim löschen erhaltet ihr keine Rückmeldung.
+
+Mit ls/dir/gci/etc. könnt ihr nun im Verzeichnis schauen ob das Element wirklich gelöscht ist.</pre>
+                </td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p></p>
+    </footer>
+</body>
+
+</html>

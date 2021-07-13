@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'consolas';
+    src: url(../fonts/CONSOLA.TTF);
+}
+/* --- default --- */
+*{
+    margin: 0;
+}
+body{
+    height: 100vh;
+    text-align: center;
+    background-color: #454440;
+    color: #f5f5f5;
+    font-family: consolas;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul, li{
+    list-style: none;
+    padding: 0;
+}
+pre{
+    font-size: .8em;
+}
+/* --- header --- */
+header nav{
+    background-color: #29201f;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+header nav ul {
+    text-align: left;
+    padding-left: 10%;
+}
+header nav ul li {
+    display: inline-block;
+    padding: 1%;
+}
+.currentLocation{
+    text-decoration: underline;
+}
+header h2{
+    margin-top: 10%;
+}
+header h1{
+    margin: 2% 0;
+}
+/* --- main --- */
+img{
+    height: 60vh;
+}
+.codeContainer{
+    width: 80vw;
+    padding: 2%;
+    margin:0 auto;
+    background-color: #29201f;
+}
+.codeContainer:first-of-type{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.codeContainer:last-of-type{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 5%;
+}
+.codeContainer .code, .codeContainer .result{
+    text-align: left;
+    width: 50%;
+    background-color: rgb(10, 10, 65);
+}
+/* --- footer --- */
